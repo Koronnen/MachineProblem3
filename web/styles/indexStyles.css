@@ -1,0 +1,148 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Page Layout: Two Columns */
+.page-layout {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Left Side Branding */
+.branding {
+    color: white;
+    flex: 1;
+    min-width: 300px;
+    padding-right: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+.branding h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.branding .yellow-accent {
+    color: #ffc107;
+}
+
+.branding p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Right Side Login Card */
+.login-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 50px 40px;
+    
+    border-top: 10px solid #ffc107; 
+    border-radius: 4px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Typography */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4285F4; /* Google Blue focus */
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.15);
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #3367D6; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .page-layout {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .branding {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}

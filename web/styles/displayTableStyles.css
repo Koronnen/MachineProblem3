@@ -1,0 +1,91 @@
+/* Container */
+.results-container {
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    position: relative;
+    background-color: #fff;
+}
+
+/* Table */
+.db-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; 
+}
+
+/* Table Header */
+.db-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #ffc107; 
+    color: #1a1a1a; 
+    z-index: 10;
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Table Cells */
+.db-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+    word-break: break-all; 
+}
+
+/* Table Rows */
+.db-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.db-table tbody tr:hover {
+    background-color: #f1f5f9; 
+}
+
+/* Actions */
+.actions-container {
+    display: flex;
+    gap: 8px;
+}
+
+.actions-container form {
+    display: inline;
+    margin: 0; 
+}
+
+/* No Record */
+.no-record {
+    text-align: center;
+    padding: 40px !important;
+    color: #666;
+    font-style: italic;
+}
+
+/* Action Buttons */
+.edit-btn { 
+    background-color: #f8f9fa !important; 
+    color: #333 !important; 
+    border: 1px solid #ccc !important;
+    padding: 6px 12px !important; 
+    font-size: 0.85rem !important;
+}
+
+.edit-btn:hover {
+    background-color: #e2e6ea !important;
+}
+
+.delete-btn { 
+    background-color: #dc3545 !important; 
+    color: white !important; 
+    padding: 6px 12px !important; 
+    font-size: 0.85rem !important;
+}
+
+.delete-btn:hover {
+    background-color: #c82333 !important;
+}
