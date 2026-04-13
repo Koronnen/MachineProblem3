@@ -84,21 +84,6 @@ public class LoginServlet extends HttpServlet {
             // 1. Get the user type (This already checks email AND password in your DB)
             String email = request.getParameter("email").trim();
             String rawPass = request.getParameter("password").trim();
-            //TEMPORARY MEASURE I CANNOT LOG TF IN 
-            if (email.equals("admin@gmail.com") && rawPass.equals("admin")){
-                System.out.println("Admin Reached");
-                s.setAttribute("email", email);
-                s.setAttribute("role", "ADMIN");
-
-                try{
-                    List<User> userList = new ArrayList<User>();
-                    userList = getList(userList);
-                    s.setAttribute("userList", userList);
-
-                }catch(SQLException sqle){response.sendRedirect("error.jsp");}
-                response.sendRedirect("success.jsp");
-                return; // EXIT the method so no exceptions are thrown
-            }
             String pass = Security.encrypt(rawPass, context);
             System.out.println("Encrypted pass: " + pass);
             int userType = checkUser(email, pass);
