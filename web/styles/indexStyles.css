@@ -146,3 +146,10 @@ button:hover {
         margin-bottom: 40px;
     }
 }
+
+.captcha-message{
+    color:red;
+    font-weight:600;
+    font-size:0.9rem;
+    padding: 2px 2px;
+}

@@ -32,8 +32,17 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" maxlength="20">
                 </div>
-                    <div class="g-recaptcha" data-sitekey="6Leisq4sAAAAAE0CRnKzI-jvprNJ8KfV2J5scKqB"></div>
-                    <br/>
+                <%
+                    Object status = session.getAttribute("captchaResult");
+                    if ("false".equals(status)){
+                %>
+                <p class="captcha-message">Invalid Captcha!</p>
+                <%
+                    session.removeAttribute("captchaResult");
+                    }
+                %>
+                <div class="g-recaptcha" data-sitekey="6Leisq4sAAAAAE0CRnKzI-jvprNJ8KfV2J5scKqB"></div>
+                <br/>
                 <button type="submit">Sign In</button>
             </form>
         </div>

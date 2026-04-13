@@ -73,8 +73,7 @@ public class LoginServlet extends HttpServlet {
         String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
 
         if (gRecaptchaResponse == null || gRecaptchaResponse.isEmpty()) {
-            s.setAttribute("captchaResult", false);
-            System.out.println("Invalid captcha");
+            s.setAttribute("captchaResult", "false");
             response.sendRedirect("index.jsp"); //go back
             return; //Get out
         }
@@ -85,7 +84,6 @@ public class LoginServlet extends HttpServlet {
             String email = request.getParameter("email").trim();
             String rawPass = request.getParameter("password").trim();
             String pass = Security.encrypt(rawPass, context);
-            System.out.println("Encrypted pass: " + pass);
             int userType = checkUser(email, pass);
 
             // 2. Handle SUCCESS first
@@ -120,7 +118,6 @@ public class LoginServlet extends HttpServlet {
             throw new exception.AuthenticationException("Wrong Username and Password.");
         } else{
             s.setAttribute("captchaResult", false);
-            System.out.println("Bad Captcha");
             response.sendRedirect("index.jsp");
         }
     }
