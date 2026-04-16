@@ -168,6 +168,13 @@ public class CrudServlet extends HttpServlet {
                         response.sendRedirect("error.jsp");
                     }
             }
+            else if (action.equalsIgnoreCase("cancelUpdate")){
+                session.removeAttribute("updateEmail");
+                session.removeAttribute("updatePass");
+                session.removeAttribute("updateUserRole");
+                
+                message = "Update cancelled";
+            }
                 session.setAttribute("message", message);
                 response.sendRedirect("success.jsp");
                 return;

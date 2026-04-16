@@ -13,8 +13,7 @@
         <script>
             function closeUpdateModal() {
                 document.getElementById("updateModal").style.display = "none";
-                // Optional: Redirect to a URL that clears the session attributes 
-                // or just let the user continue.
+                window.location.href = "${pageContext.request.contextPath}/CrudServlet?action=cancelUpdate";
             }
         </script>
     </head>
