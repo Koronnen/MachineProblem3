@@ -4,6 +4,18 @@
         <param-name>SecurityKey</param-name>
         <param-value>pimenteltomale67</param-value>
     </context-param>
+    <context-param>
+        <param-name>CipherAlgorithm</param-name>
+        <param-value>AES</param-value>
+    </context-param>
+    <context-param>
+        <param-name>CipherMode</param-name>
+        <param-value>ECB</param-value>
+    </context-param>
+    <context-param>
+        <param-name>CipherPaddingScheme</param-name>
+        <param-value>PKCS5Padding</param-value>
+    </context-param>
     <servlet>
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>controller.LoginServlet</servlet-class>
